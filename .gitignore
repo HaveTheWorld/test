@@ -1,0 +1,13 @@
+.vscode
+.idea
+.DS_Store
+
+jsconfig.js
+jsconfig.json
+
+*.log
+
+.env
+
+node_modules
+/build
