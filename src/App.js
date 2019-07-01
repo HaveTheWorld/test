@@ -1,6 +1,13 @@
 import React from 'react';
-import { hot } from 'react-hot-loader/root';
 
-const App = () => <div>App</div>;
+import First from 'components/First';
 
-export default hot(App);
+const App = () => (
+  <div>
+    <h1>App</h1>
+    <hr />
+    <First />
+  </div>
+);
+
+export default App;
