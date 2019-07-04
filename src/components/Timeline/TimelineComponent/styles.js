@@ -1,5 +1,7 @@
 export default theme => ({
   timelineComponent: {
-    margin: `${theme.dimen.gapBig} 0`,
+    position: 'relative',
+    margin: `${theme.dimen.gapLarge} 0`,
+    paddingTop: 50,
   },
 });

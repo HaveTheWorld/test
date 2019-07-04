@@ -1,21 +1,21 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import OptionsGrid from './OptionsComponent';
 import TimelineComponent from './TimelineComponent';
 import styles from './styles';
 
-const TimelineContainer = () => (
-  <Fragment>
+const TimelineContainer = ({ classes }) => (
+  <div className={classes.timeline}>
     <Typography
       variant="h6"
       color="primary"
     >
-        TimelineContainer
+        Timeline Container
     </Typography>
     <TimelineComponent />
     <OptionsGrid />
-  </Fragment>
+  </div>
 );
 
 export default withStyles(styles)(TimelineContainer);
