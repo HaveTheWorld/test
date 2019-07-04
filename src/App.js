@@ -1,13 +1,15 @@
 import React from 'react';
-
-import First from 'components/First';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import muiTheme from 'theme';
+import Layout from 'components/Layout';
+import TimelineContainer from 'components/Timeline';
 
 const App = () => (
-  <div>
-    <h1>App</h1>
-    <hr />
-    <First />
-  </div>
+  <MuiThemeProvider theme={muiTheme}>
+    <Layout>
+      <TimelineContainer />
+    </Layout>
+  </MuiThemeProvider>
 );
 
 export default App;
