@@ -1,11 +1,9 @@
-import { ITEM_LINE_SIZE_PX } from '../constants';
-
-export default () => ({
-  timelineItem: {
-    position: 'absolute',
-    height: 50, // FIXME
-    width: '100%',
-    backgroundColor: 'transparent',
-    bottom: -ITEM_LINE_SIZE_PX,
+export default (/* theme */) => ({
+  itemWrapper: {
+    transform: ({ index }) => `translate(-${index * 100}%)`,
+    flexBasis: '100%',
+    flexShrink: 0,
+    position: 'relative',
+    display: 'flex',
   },
 });

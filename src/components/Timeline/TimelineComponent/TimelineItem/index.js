@@ -1,22 +1,28 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import IndicatorLine from './IndicatorLine';
+import LabelWrapper from './LabelWrapper';
 import styles from './styles';
-import ItemLine from './ItemLine';
 
-function TimelineItem(props) {
-  const { classes, start, end } = props;
-  const isPoint = Number.isNaN(parseFloat(end));
+const TimelineItem = ({
+  classes, start, end, label,
+}) => {
+  const preparedEnd = end || start;
+  const isPoint = start === preparedEnd;
   return (
-    <div
-      className={classes.timelineItem}
-    >
-      <ItemLine
+    <div className={classes.itemWrapper}>
+      <LabelWrapper
+        start={start}
+        end={preparedEnd}
+        label={label}
+      />
+      <IndicatorLine
         isPoint={isPoint}
         start={start}
-        end={end}
+        end={preparedEnd}
       />
     </div>
   );
-}
+};
 
 export default withStyles(styles)(TimelineItem);
