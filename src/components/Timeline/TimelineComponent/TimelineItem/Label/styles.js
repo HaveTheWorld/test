@@ -5,16 +5,15 @@ import {
   Z_INDEX_LABEL,
 } from 'components/Timeline/TimelineComponent/constants';
 
-function getOffset(start, end) {
-  return start + end > 100 ? start + end - 100 : 0;
-}
-
 export default theme => ({
   labelOffset: {
-    flexGrow: ({ start, end }) => Number(getOffset(start, end)),
+    flexGrow: ({ start, end }) => (start + end > 100 ? start + end - 100 : 0),
   },
   labelWrapper: {
-    minWidth: ({ start, end }) => `calc(${start + end - getOffset(start, end) * 2}%)`,
+    minWidth: ({ start, end }) => {
+      const offset = start + end > 100 ? start + end - 100 : 0;
+      return `calc(${start + end - offset * 2}%)`;
+    },
     marginBottom: 20, // FIXME
     display: 'flex',
     justifyContent: 'center',

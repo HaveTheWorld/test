@@ -4,7 +4,7 @@ import styles from './styles';
 import Spot from './Spot';
 
 const Indicator = ({ classes, isPoint }) => (
-  <div className={classes.indicatorWraper}>
+  <div className={classes.indicatorWrapper}>
     <div className={classes.indicatorLine} />
     <Spot />
     {!isPoint && (

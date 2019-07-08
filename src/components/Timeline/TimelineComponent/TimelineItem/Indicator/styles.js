@@ -4,7 +4,7 @@ import {
 } from 'components/Timeline/TimelineComponent/constants';
 
 export default theme => ({
-  indicatorWraper: {
+  indicatorWrapper: {
     position: 'absolute',
     bottom: 0,
     left: ({ start }) => `calc(${start}% + ${INDICATOR_LINE_SIZE_PX}px)`,
