@@ -23,6 +23,7 @@ const TimelineItem = ({
       />
       <Indicator
         isPoint={isPoint}
+        titles={[start, end]}
         start={preparedStart}
         end={preparedEnd}
       />

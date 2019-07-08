@@ -4,7 +4,6 @@ import { INDICATOR_LINE_SIZE_PX } from './constants';
 
 export default theme => ({
   wrapper: {
-    // padding: `0 ${theme.dimen.gapSmall}`,
     margin: `${theme.dimen.gapMedium} 0`,
   },
   topLevel: {

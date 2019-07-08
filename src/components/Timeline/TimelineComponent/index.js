@@ -12,7 +12,7 @@ const items = [
   },
   { id: 3, start: 0, label: '5 февраля 1985г.' },
   {
-    id: 4, start: 55, end: 55, label: '1945г.',
+    id: 4, start: 50, end: 55, label: '1945г.',
   },
 ];
 

@@ -5,12 +5,12 @@ import { CSS_ITEM_INDICATOR_LINE } from 'components/Timeline/TimelineComponent/c
 import styles from './styles';
 import Spot from './Spot';
 
-const Indicator = ({ classes, isPoint }) => (
+const Indicator = ({ classes, isPoint, titles }) => (
   <div className={classes.indicatorWrapper}>
     <div className={classnames(classes.indicatorLine, CSS_ITEM_INDICATOR_LINE)} />
-    <Spot />
+    <Spot title={titles[0]} />
     {!isPoint && (
-    <Spot isRight />
+    <Spot isRight title={titles[1]} />
     )}
   </div>
 );

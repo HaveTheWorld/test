@@ -7,6 +7,7 @@ import {
   Z_INDEX_INDICATOR_SPOT,
   Z_INDEX_LABEL,
 } from 'components/Timeline/TimelineComponent/constants';
+import { fade } from '@material-ui/core/styles';
 
 export default theme => ({
   itemWrapper: {
@@ -18,19 +19,22 @@ export default theme => ({
     pointerEvents: 'none',
     '&:hover': {
       [`& .${CSS_ITEM_INDICATOR_LINE}`]: {
-        borderColor: theme.palette.secondary.dark,
         zIndex: Z_INDEX_INDICATOR_LINE + 1,
+        borderColor: theme.palette.secondary.dark,
+        borderBottomColor: fade(theme.color.grey, 0.5),
       },
       [`& .${CSS_ITEM_INDICATOR_SPOT}`]: {
-        borderColor: theme.palette.secondary.dark,
         zIndex: Z_INDEX_INDICATOR_SPOT + 1,
+        borderColor: theme.palette.secondary.dark,
       },
       [`& .${CSS_ITEM_LABEL_PAPER}`]: {
-        borderColor: theme.palette.secondary.dark,
         zIndex: Z_INDEX_LABEL + 1,
+        borderColor: theme.palette.secondary.dark,
+        boxShadow: theme.shadows[2],
       },
       [`& .${CSS_ITEM_LABEL_BADGE}`]: {
         backgroundColor: theme.palette.secondary.dark,
+        boxShadow: theme.shadows[1],
       },
     },
   },

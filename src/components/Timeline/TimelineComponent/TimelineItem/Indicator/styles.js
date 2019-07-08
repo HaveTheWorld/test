@@ -3,6 +3,7 @@ import {
   Z_INDEX_INDICATOR_LINE,
   HOVER_TRANSITION,
 } from 'components/Timeline/TimelineComponent/constants';
+import { fade } from '@material-ui/core/styles';
 
 export default theme => ({
   indicatorWrapper: {
@@ -20,6 +21,7 @@ export default theme => ({
     left: -INDICATOR_LINE_SIZE_PX,
     border: `${INDICATOR_LINE_SIZE_PX}px solid ${theme.palette.secondary.main}`,
     borderBottomWidth: INDICATOR_LINE_SIZE_PX * 2,
+    borderBottomColor: fade(theme.palette.secondary.main, 0),
     borderRightWidth: ({ isPoint }) => (isPoint ? 0 : null),
     zIndex: Z_INDEX_INDICATOR_LINE,
     transition: `border-color ${HOVER_TRANSITION}`,
