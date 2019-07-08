@@ -1,6 +1,7 @@
 import {
   INDICATOR_LINE_SIZE_PX,
   Z_INDEX_INDICATOR_LINE,
+  HOVER_TRANSITION,
 } from 'components/Timeline/TimelineComponent/constants';
 
 export default theme => ({
@@ -21,6 +22,6 @@ export default theme => ({
     borderBottomWidth: INDICATOR_LINE_SIZE_PX * 2,
     borderRightWidth: ({ isPoint }) => (isPoint ? 0 : null),
     zIndex: Z_INDEX_INDICATOR_LINE,
-    pointerEvents: 'all',
+    transition: `border-color ${HOVER_TRANSITION}`,
   },
 });

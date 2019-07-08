@@ -1,6 +1,7 @@
 import { fade } from '@material-ui/core/styles/colorManipulator';
 
 import {
+  HOVER_TRANSITION,
   LABEL_MAX_WIDTH_PX,
   Z_INDEX_LABEL,
 } from 'components/Timeline/TimelineComponent/constants';
@@ -25,6 +26,7 @@ export default theme => ({
     display: 'flex',
     pointerEvents: 'all',
     cursor: 'pointer',
+    transition: `border-color ${HOVER_TRANSITION}`,
   },
   labelContent: {
     padding: theme.dimen.gapSmall,
@@ -38,5 +40,6 @@ export default theme => ({
     borderBottomLeftRadius: theme.shape.borderRadius,
     fontFamily: theme.typography.fontFamily,
     fontSize: 14,
+    transition: `background-color ${HOVER_TRANSITION}`,
   },
 });
