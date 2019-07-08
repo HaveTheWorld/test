@@ -9,7 +9,7 @@ export default theme => ({
     bottom: 0,
     left: ({ start }) => `calc(${start}% + ${INDICATOR_LINE_SIZE_PX}px)`,
     width: ({ isPoint, start, end }) => (isPoint ? 0 : `calc(${end - start}% - ${INDICATOR_LINE_SIZE_PX * 2}px)`),
-    height: 35, // FIXME
+    height: `calc(${theme.dimen.gapLarge} + ${theme.dimen.gapSmall} + ${INDICATOR_LINE_SIZE_PX}px)`,
   },
   indicatorLine: {
     position: 'absolute',

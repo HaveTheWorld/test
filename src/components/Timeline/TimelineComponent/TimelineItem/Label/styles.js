@@ -14,16 +14,29 @@ export default theme => ({
       const offset = start + end > 100 ? start + end - 100 : 0;
       return `calc(${start + end - offset * 2}%)`;
     },
-    marginBottom: 20, // FIXME
+    marginBottom: theme.dimen.gapMedium,
     display: 'flex',
     justifyContent: 'center',
   },
-  label: {
+  labelPaper: {
     maxWidth: LABEL_MAX_WIDTH_PX,
-    padding: 10, // FIXME
-    border: `1px solid ${fade(theme.color.grey, 0.75)}`,
     zIndex: Z_INDEX_LABEL,
+    border: `1px solid ${fade(theme.color.grey, 0.75)}`,
+    display: 'flex',
     pointerEvents: 'all',
     cursor: 'pointer',
+  },
+  labelContent: {
+    padding: theme.dimen.gapSmall,
+  },
+  labelBadge: {
+    alignSelf: 'flex-start',
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.color.white,
+    lineHeight: 1,
+    padding: `${theme.dimen.gapTiny} ${theme.dimen.gapSmall}`,
+    borderBottomLeftRadius: theme.shape.borderRadius,
+    fontFamily: theme.typography.fontFamily,
+    fontSize: 14,
   },
 });

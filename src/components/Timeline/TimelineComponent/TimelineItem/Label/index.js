@@ -8,8 +8,11 @@ const Label = ({ classes, label }) => (
   <Fragment>
     <div className={classes.labelOffset} />
     <div className={classes.labelWrapper}>
-      <Paper className={classes.label}>
-        <Typography>{label}</Typography>
+      <Paper className={classes.labelPaper}>
+        <Typography className={classes.labelContent}>{label}</Typography>
+        <div className={classes.labelBadge}>
+            2
+        </div>
       </Paper>
     </div>
   </Fragment>

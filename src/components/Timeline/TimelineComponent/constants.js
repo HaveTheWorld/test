@@ -1,4 +1,4 @@
-export const LABEL_MAX_WIDTH_PX = 300;
+export const LABEL_MAX_WIDTH_PX = 350;
 
 export const INDICATOR_SPOT_SIZE_PX = 12;
 export const INDICATOR_LINE_SIZE_PX = 2;
