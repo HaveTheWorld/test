@@ -1,13 +1,14 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
-import IndicatorSpot from '../IndicatorSpot';
+import Spot from './Spot';
 
 const Indicator = ({ classes, isPoint }) => (
-  <div className={classes.line}>
-    <IndicatorSpot />
+  <div className={classes.indicatorWraper}>
+    <div className={classes.indicatorLine} />
+    <Spot />
     {!isPoint && (
-    <IndicatorSpot isRight />
+    <Spot isRight />
     )}
   </div>
 );

@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import styles from './styles';
 
-const LabelWrapper = ({ classes, label }) => (
+const Label = ({ classes, label }) => (
   <Fragment>
     <div className={classes.labelOffset} />
     <div className={classes.labelWrapper}>
@@ -15,4 +15,4 @@ const LabelWrapper = ({ classes, label }) => (
   </Fragment>
 );
 
-export default withStyles(styles)(LabelWrapper);
+export default withStyles(styles)(Label);

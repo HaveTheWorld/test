@@ -10,7 +10,7 @@ export default theme => ({
   topLevel: {
     display: 'flex',
     alignItems: 'flex-end',
-    transform: `translateY(${INDICATOR_LINE_SIZE_PX + 1}px)`,
+    transform: `translateY(-${INDICATOR_LINE_SIZE_PX / 2}px)`,
   },
   baseLine: {
     borderBottom: `${INDICATOR_LINE_SIZE_PX}px solid ${fade(theme.color.grey, 0.75)}`,

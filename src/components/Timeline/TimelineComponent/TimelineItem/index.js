@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import IndicatorLine from './IndicatorLine';
-import LabelWrapper from './LabelWrapper';
+import Indicator from './Indicator';
+import Label from './Label';
 import styles from './styles';
 
 const TimelineItem = ({
@@ -11,12 +11,12 @@ const TimelineItem = ({
   const isPoint = start === preparedEnd;
   return (
     <div className={classes.itemWrapper}>
-      <LabelWrapper
+      <Label
         start={start}
         end={preparedEnd}
         label={label}
       />
-      <IndicatorLine
+      <Indicator
         isPoint={isPoint}
         start={start}
         end={preparedEnd}

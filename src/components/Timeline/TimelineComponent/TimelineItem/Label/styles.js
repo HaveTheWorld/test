@@ -1,7 +1,6 @@
 import { fade } from '@material-ui/core/styles/colorManipulator';
 
 import {
-  INDICATOR_LINE_SIZE_PX,
   LABEL_MAX_WIDTH_PX,
   Z_INDEX_LABEL,
 } from 'components/Timeline/TimelineComponent/constants';
@@ -15,7 +14,7 @@ export default theme => ({
     flexGrow: ({ start, end }) => Number(getOffset(start, end)),
   },
   labelWrapper: {
-    minWidth: ({ start, end }) => `calc(${start + end - getOffset(start, end) * 2}% - ${INDICATOR_LINE_SIZE_PX}px)`,
+    minWidth: ({ start, end }) => `calc(${start + end - getOffset(start, end) * 2}%)`,
     marginBottom: 20, // FIXME
     display: 'flex',
     justifyContent: 'center',
@@ -25,5 +24,7 @@ export default theme => ({
     padding: 10, // FIXME
     border: `1px solid ${fade(theme.color.grey, 0.75)}`,
     zIndex: Z_INDEX_LABEL,
+    pointerEvents: 'all',
+    cursor: 'pointer',
   },
 });
